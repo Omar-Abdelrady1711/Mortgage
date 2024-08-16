@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body{
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+   background-color: hsl(202, 86%, 94%);
+}
+input::-webkit-outer-spin-button, ::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+
+}
+
+.container{
+    display: flex;
+    width: 50%;
+    height: 400px;
+    background-color: white;
+    border-radius: 12px;
+}
+
+.left{
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+    width:50%;
+    height: 400px;
+    padding:10px;
+    
+}
+
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 5px;
+    button{
+       border: none; 
+       background-color: white;
+       cursor: pointer;
+       text-decoration: underline;
+       color:rgb(99, 98, 98)
+    }
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    gap:7px
+}
+.AmountContainer{
+display: flex;
+flex-direction: column;
+gap:10px
+}
+.Amount{
+    margin-bottom:10px;
+    display: flex;
+   .sign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  hsl(202, 86%, 94%);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-weight: 500;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: 1px hsl(203, 20%, 72%) solid;
+    border-right: none;
+    
+   }
+   input[type='number']{ 
+    border:1px   hsl(203, 20%, 72%) solid;
+    border-left: none;
+    border-radius:0;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    
+}
+}
+
+input[type='number']{ 
+    width: 90%;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 4px;
+    
+}
+#Term-Rate{
+    display: flex;
+    flex-direction: row;
+
+    .blueShade{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  hsl(202, 86%, 94%);
+    width: 60%;
+    padding:0 2;
+    height: 30px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16;
+    border:1px  hsl(203, 20%, 72%) solid;
+    border-left: 0;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    cursor:default;
+}
+#percentage{
+    width: 35px;
+}
+    input{
+        border:1px  hsl(203, 20%, 72%)solid;
+        border-right: 0;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+}
+.TermContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .Term{
+        display: flex;
+    }
+}
+.RateContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .Rate{
+        display:flex;
+    }
+}
+.radioChoice{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 30px;
+    padding: 5px 10px;
+    border: solid hsl(203, 20%, 72%) 1px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 500;
+    cursor: pointer;
+    label{
+        text-align: center;
+        cursor: pointer;
+    }
+    transition: background-color 0.3s;
+}
+.radioChoice:focus-within{
+    background-color: hsl(61, 88%, 87%);
+}
+.radioChoice:hover{
+    border-color: hsl(61, 72%, 68%);
+}
+.labels{
+    font-size: 12px;
+    font-weight: 500;
+    color: hsl(200, 26%, 54%);
+}
+#CalculateButton{
+    flex-direction: row;
+    align-items: center;
+}
+#calculate{
+    display: flex;
+    gap: 10px;
+    width:70%;
+    text-align: center;
+    vertical-align: baseline;
+    border-radius: 20px;
+    border: none;
+    background-color:hsl(61, 70%, 52%) ;
+    line-height: 24px;
+    cursor: pointer;
+    padding: 3px 13px;
+    width:fit-content;
+    transition: background-color 0.3s;
+    svg{
+        width: 18px;
+    }
+}
+#calculate:hover{
+    background-color: hsl(61, 90%, 75%) ;
+}
+input:focus {
+    outline: none; 
+}
+
+
+.Amount:focus-within{
+ .sign{
+    background-color: hsl(61, 70%, 52%);
+    border-color: hsl(61, 70%, 52%);
+}
+ input{
+    border-color: hsl(61, 70%, 52%);
+    }
+}
+
+#Term-Rate:focus-within{
+    .blueShade{
+       background-color: hsl(61, 70%, 52%);
+       border-color: hsl(61, 70%, 52%);
+   }
+    input{
+       border-color: hsl(61, 70%, 52%);
+       }
+   }
+   
+
+
+
+input:focus + .blueShade,
+input:focus + .Amount .sign {
+    background-color: hsl(61, 70%, 52%); /* Change background color when input is focused */
+}
+.after{
+    display:none;
+}
+
+.right{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    width:50%;
+    height: 400px;
+    border: 2px solid black;
+    padding:10px;
+    background-color: hsl(202, 55%, 16%) ;
+    border-radius: 12px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 50px;
+    border: none;
+    color:white;
+    .resultSubtext{
+        color: hsl(203, 20%, 72%);
+        font-size: 12px;
+    }
+    .before{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        img{
+            width: 170px;
+        }
+    }
+}
