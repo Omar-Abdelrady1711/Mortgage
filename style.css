@@ -226,7 +226,7 @@ input:focus {
 
 input:focus + .blueShade,
 input:focus + .Amount .sign {
-    background-color: hsl(61, 70%, 52%); /* Change background color when input is focused */
+    background-color: hsl(61, 70%, 52%); 
 }
 .after{
     display:none;
